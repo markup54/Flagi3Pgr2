@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT)
                 .show();
     }
+
+    public void dobraOdpowiedz(View view) {
+        view.setVisibility(View.INVISIBLE);
+    }
 }
