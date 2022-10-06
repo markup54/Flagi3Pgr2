@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    public int licznik;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void dobraOdpowiedz(View view) {
         view.setVisibility(View.INVISIBLE);
+        licznik++;
+        if(licznik == 5){
+            TextView pytanieTextView = findViewById(R.id.pytanieTextView);
+            pytanieTextView.setText("Gratulacje, \n znasz flagę Polski");
+        }
     }
 }
